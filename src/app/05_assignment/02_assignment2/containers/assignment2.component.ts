@@ -1,3 +1,4 @@
+import { AssignmentComponent } from './../../assignment.component';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./assignment2.component.css']
 })
 export class Assignment2Component {
+  Todo ;
+  selectedRow : Number;
+  getClickedRow : Function;
+  constructor( arr: AssignmentComponent){
+      this.Todo = arr.getTodos();
+      this.getClickedRow = function(index){
+      this.selectedRow = index; 
+  }
+}
+ 
 
 }
